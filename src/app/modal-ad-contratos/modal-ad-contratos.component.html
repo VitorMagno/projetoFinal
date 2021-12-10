@@ -1,1 +1,45 @@
-<p>modal-ad-contratos works!</p>
+<div class="modal fade" id="adicionarContratoModal" tabindex="-1" aria-labelledby="adicionarContratoModal" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="adicionarContratoModal">Adicionar Contratos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="item-form">
+                <div class="modal-body">
+                    
+                        <div class="row g-3">
+                            
+                            <div class="col">
+                                <label for="adicionarContratoNumero" class="form-label">Número</label>
+                                <input type="text" class="form-control" id="adicionarContratoNumero">
+                            </div>
+                            <div class="col">
+                                <label for="adicionarContratoPrestador" class="form-label">Prestador (razão social)</label>
+                                <input type="text" class="form-control" id="adicionarContratoPrestador">
+                            </div>
+                            <div class="col">
+                                <label for="adicionarContratoValor" class="form-label">Valor</label>
+                                <input type="number" class="form-control" id="adicionarContratoValor">
+                            </div>
+                            <div class="col">
+                                <label for="adicionarContratoInicio" class="form-label">Início</label>
+                                <input type="date" class="form-control" id="adicionarContratoInicio" placeholder="">
+                            </div>
+                            <div class="col">
+                                <label for="adicionarContratoTermino" class="form-label">Término</label>
+                                <input type="date" class="form-control" id="adicionarContratoTermino" placeholder="">
+                            </div>
+                        </div>
+                
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary" data-bs-toggle=""="adicionarContratoModal">Adicionar</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

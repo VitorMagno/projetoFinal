@@ -1,1 +1,44 @@
-<p>ab-geral works!</p>
+<div class="tab-pane fade show active" id="geral" role="tabpanel" aria-labelledby="geral-tab">
+
+    <!---Formulario--->
+
+    <form id="geral-form">
+        <div class="row g-3">
+            
+            <div class="col">
+              <label for="numero" class="form-label">Número</label>
+              <input type="text" readonly class="form-control" id="numero" value="(nnn/aaa)" disabled>
+            </div>
+            <div class="col">
+              <label for="prestador" class="form-label">Prestador (razão social)</label>
+              <input type="text" class="form-control" id="prestador" placeholder="" disabled>
+            </div>
+            <div class="col">
+                <label for="valor" class="form-label">Valor</label>
+                <input type="number" class="form-control" id="valor" placeholder="" disabled>
+            </div>
+        </div>
+        <div class="row g-3">
+            
+            <div class="col">
+              <label for="inicio_vigencia" class="form-label">Inicio da vigência</label>
+              <input type="date" class="form-control" id="inicio_vigencia">
+            </div>
+            <div class="col">
+              <label for="termino_vigencia" class="form-label">Término da vigência</label>
+              <input type="date" class="form-control" id="termino_vigencia">
+            </div>
+        </div>
+        <div class="row g-3">
+            
+            <div class="col">
+              <label for="objeto" class="form-label">Objeto</label>
+              <textarea  class="form-control" id="objeto">
+
+              </textarea>
+            </div>
+        </div>
+    </form>
+
+    <!---//Formulario--->
+</div>

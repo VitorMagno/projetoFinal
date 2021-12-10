@@ -1,1 +1,37 @@
-<p>modal-ad-item works!</p>
+<div class="modal fade" id="adicionarItemModal" tabindex="-1" aria-labelledby="adicionarItemModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="adicionarItemModal">Adicionar item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="item-form">
+                <div class="modal-body">
+                    
+                        <div class="row g-3">
+                                
+                            <div class="col">
+                                <label for="prestador-item" class="form-label">Prestador (razão social)</label>
+                                <input type="text" class="form-control" id="prestador-item">
+                            </div>
+                            <div class="col">
+                                <label for="ordem-item" class="form-label">Ordem</label>
+                                <input type="text" class="form-control" id="ordem-item" placeholder="">
+                            </div>
+                            <div class="col">
+                                <label for="item-ordem-form" class="form-label">Item Ordem</label>
+                                <input type="text" class="form-control" id="item-ordem-form" placeholder="">
+                            </div>
+                        </div>
+                
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary" data-bs-toggle=""="modal-adicionar-item">Adicionar</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

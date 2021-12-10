@@ -1,1 +1,60 @@
-<p>ab-itens works!</p>
+<div class="tab-pane fade show" id="itens" role="tabpanel" aria-labelledby="itens-tab">
+    <div class="card">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h6 class="card-title">Itens</h6>
+                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#adicionarItemModal">
+                    <i class="bi bi-plus"></i>
+                </button>
+
+            </div>    
+        </div>
+        <div class="card-body">
+
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Serviço</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Valor unitário</th>
+                    <th scope="col">Valor total</th>
+                    <th scope="col">Itens</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Serviço 1</td>
+                    <td>1</td>
+                    <td>10,00</td>
+                    <td>10,00</td>
+                    <td>    
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#visualizarItemModal">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row">
+                            Total
+                        </th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>10,00</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            
+            </table>
+
+        </div>
+    
+    </div>
+</div>
