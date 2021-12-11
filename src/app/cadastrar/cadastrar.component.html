@@ -1,15 +1,274 @@
 <app-navbar></app-navbar>
-
-<app-sidebar></app-sidebar>
+<div class="d-flex">
+  <app-sidebar></app-sidebar>
+</div>
 <div class="d-flex flex-column flex-fill">
   <div class="container-fluid">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item"><a routerLink="/inicio">Inicio</a></li>
         <li class="breadcrumb-item active" aria-current="page">Contratos</li>
         <li class="breadcrumb-item active" aria-current="page">Cadastrar</li>
       </ol>
     </nav>
-    <app-tabs-card></app-tabs-card>
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Cadastro de contrato</h5>
+      </div>
+
+      <div class="card-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="geral-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#geral"
+              type="button"
+              role="tab"
+              aria-controls="geral"
+              aria-selected="true"
+            >
+              Geral
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="itens-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#itens"
+              type="button"
+              role="tab"
+              aria-controls="itens"
+              aria-selected="true"
+            >
+              Itens
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="projetos-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#projetos"
+              type="button"
+              role="tab"
+              aria-controls="projetos"
+              aria-selected="true"
+            >
+              Projetos
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content mt-2" id="myTabContent">
+          <!--tabs abaixo-->
+          <div
+            class="tab-pane fade show active"
+            id="geral"
+            role="tabpanel"
+            aria-labelledby="geral-tab"
+          >
+            <!---Formulario--->
+
+            <form id="geral-form">
+              <div class="row g-3">
+                <div class="col">
+                  <label for="numero" class="form-label">Número</label>
+                  <input
+                    type="text"
+                    readonly
+                    class="form-control"
+                    id="numero"
+                    value="(nnn/aaa)"
+                    disabled
+                  />
+                </div>
+                <div class="col">
+                  <label for="prestador" class="form-label"
+                    >Prestador (razão social)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="prestador"
+                    placeholder=""
+                    disabled
+                  />
+                </div>
+                <div class="col">
+                  <label for="valor" class="form-label">Valor</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="valor"
+                    placeholder=""
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col">
+                  <label for="inicio_vigencia" class="form-label"
+                    >Inicio da vigência</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="inicio_vigencia"
+                  />
+                </div>
+                <div class="col">
+                  <label for="termino_vigencia" class="form-label"
+                    >Término da vigência</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="termino_vigencia"
+                  />
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col">
+                  <label for="objeto" class="form-label">Objeto</label>
+                  <textarea class="form-control" id="objeto"> </textarea>
+                </div>
+              </div>
+            </form>
+
+            <!---//Formulario--->
+          </div>
+          <div
+            class="tab-pane fade show"
+            id="projetos"
+            role="tabpanel"
+            aria-labelledby="projetos-tab"
+          >
+            <div class="card">
+              <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h6 class="card-title">Projetos</h6>
+                  <!--<button class="btn btn-primary btn-sm">
+                          <i class="bi bi-plus"></i>
+                      </button>-->
+                </div>
+              </div>
+              <div class="card-body">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Projeto</th>
+                      <th scope="col">Valor total</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Projeto 1</td>
+                      <td>10,00</td>
+                    </tr>
+                  </tbody>
+
+                  <tfoot>
+                    <tr>
+                      <th scope="row">Total</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>10,00</td>
+                      <td></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade show"
+            id="itens"
+            role="tabpanel"
+            aria-labelledby="itens-tab"
+          >
+            <div class="card">
+              <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h6 class="card-title">Itens</h6>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#adicionarItemModal"
+                  >
+                    <i class="bi bi-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Serviço</th>
+                      <th scope="col">Quantidade</th>
+                      <th scope="col">Valor unitário</th>
+                      <th scope="col">Valor total</th>
+                      <th scope="col">Itens</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Serviço 1</td>
+                      <td>1</td>
+                      <td>10,00</td>
+                      <td>10,00</td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-primary btn-sm"
+                          data-bs-toggle="modal"
+                          data-bs-target="#visualizarItemModal"
+                        >
+                          <i class="bi bi-search"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+
+                  <tfoot>
+                    <tr>
+                      <th scope="row">Total</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>10,00</td>
+                      <td></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!--//tabs-->
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-end">
+          <div class="btn-group gap-1" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Voltar</button>
+            <button id="submit-cadastro" type="submit" class="btn btn-primary">
+              Enviar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
